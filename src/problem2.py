@@ -2,7 +2,7 @@
 Exam 1, problem 2.
 
 Authors: David Mutchler, Dave Fisher, Matt Boutell, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.  March 2018.
+         their colleagues and Xuechen Bai.  March 2018.
 """  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
@@ -82,7 +82,17 @@ def run_test_problem2():
 #
 ###############################################################################
 def problem2(line1, line2, thickness, win):
-    """
+    line1.attach_to(win)
+    line2.attach_to(win)
+    a=line1.get_midpoint()
+    b=line2.get_midpoint()
+    c=rg.Rectangle(a,b)
+    c.outline_color=line1.color
+    c.outline_thickness=thickness
+    c.attach_to (win)
+    win.render()
+
+"""
     See   problem2_pictures.pdf   for pictures that may help you
     better understand the following specification:
 

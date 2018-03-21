@@ -2,7 +2,7 @@
 Exam 1, problem 4.
 
 Authors: David Mutchler, Dave Fisher, Matt Boutell, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.  March 2018.
+         their colleagues and Xuechen Bai.  March 2018.
 """  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
@@ -112,7 +112,17 @@ def run_test_problem4():
 
 
 def problem4(m):
-    """
+    a=0
+    for k in range(2,m):
+        b=m%k
+        if b==0:
+            a=a+1
+    return a
+
+
+
+
+"""
     What comes in:  Positive integer m.
     What goes out:  Returns the number of non-trival FACTORS of m, where:
       -- a FACTOR of m is a positive integer that divides evenly into m

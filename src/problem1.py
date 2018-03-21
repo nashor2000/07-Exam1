@@ -2,7 +2,7 @@
 Exam 1, problem 1.
 
 Authors: David Mutchler, Dave Fisher, Matt Boutell, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.  March 2018.
+         their colleagues and Xuechen Bai.  March 2018.
 """  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
@@ -166,7 +166,12 @@ def run_test_problem1a():
 #    **  the appropriate function(s) that are defined above.
 ###############################################################################
 def problem1a(a, b, threshold):
-    """
+    q=0
+    for k in range (a, b+1):
+        if product_of_digits(k)< threshold:
+            q=q+ k
+    return q
+"""
     What comes in:
       -- Positive integers a and b with a <= b
       -- A number ('threshold')
@@ -218,6 +223,35 @@ def run_test_problem1b():
     print('Testing the   problem1b   function:')
     print('--------------------------------------------------')
 
+    expected = 682
+    answer = problem1b(8)
+    print()
+    print('Test 1 is: problem1b(8)')
+    print('  Expected:', expected)
+    print('  Actual:  ', answer)
+
+    expected = 5707
+    answer = problem1b(12)
+    print()
+    print('Test 2 is: problem1b(12)')
+    print('  Expected:', expected)
+    print('  Actual:  ', answer)
+
+    expected = 64
+    answer = problem1b(4)
+    print()
+    print('Test 3 is: problem1b(4)')
+    print('  Expected:', expected)
+    print('  Actual:  ', answer)
+
+    expected = 5707
+    answer = problem1b(12)
+    print()
+    print('Test 4 is: problem1b(73)')
+    print('  Expected:', expected)
+    print('  Actual:  ', answer)
+
+
 
 ###############################################################################
 # IMPORTANT note: in the following problem,
@@ -226,7 +260,12 @@ def run_test_problem1b():
 #    **  possibly including ones you have written.
 ###############################################################################
 def problem1b(r):
-    """
+    q=0
+    for k in range (r, r**2+1):
+        if product_of_digits(k)<= r:
+            q=q+k
+    return q
+"""
     What comes in:  An integer r that is at least 3.
     What goes out:  Returns the sum of the numbers from r to (r squared),
       inclusive, whose product-of-digits is less than or equal to r.

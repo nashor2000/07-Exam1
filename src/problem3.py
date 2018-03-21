@@ -2,11 +2,11 @@
 Exam 1, problem 3.
 
 Authors: David Mutchler, Dave Fisher, Matt Boutell, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.  March 2018.
+         their colleagues and Xuechen Bai.  March 2018.
 """  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
-
+import math
 
 def main():
     """ Calls the   TEST   functions in this module. """
@@ -64,7 +64,19 @@ def run_test_problem3():
 #
 ###############################################################################
 def problem3(rect, n, window):
-    """
+    rect.attach_to(window)
+    a=rect.corner_2.x
+    b=rect.corner_2.y
+    d=rect.get_height()
+    for k in range (n):
+        c=rg.Point(a+d/math.sqrt(2)*k,b+d/math.sqrt(2)*k)
+        e=rg.Circle(c,d/2)
+        e.attach_to(window)
+    window.render()
+
+
+
+"""
     See    problem3_pictures.pdf     for pictures that may help you
     better understand the following specification:
 
